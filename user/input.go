@@ -6,3 +6,8 @@ type RegisterUserInput struct {
 	Email      string `json:"email" binding:"required,email"` // email harus sesuai format email
 	Password   string `json:"password" binding:"required"`
 }
+
+type LoginInput struct {
+	Email    string `json:"email" binding:"required,email"` // email harus sesuai format email
+	Password string `json:"password" binding:"required"`
+}
