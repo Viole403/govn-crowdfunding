@@ -1,6 +1,7 @@
 package main
 
 import (
+	"govn-crowdfunding/auth"
 	"govn-crowdfunding/handler"
 	"govn-crowdfunding/user"
 	"log"
@@ -22,8 +23,9 @@ func main() {
 
 	userRepository := user.NewRepository(db)
 	userService := user.NewService(userRepository)
+	authService := auth.NewService() // Update to use the correct service
 
-	userHandler := handler.NewUserHandler(userService)
+	userHandler := handler.NewUserHandler(userService, authService)
 
 	router := gin.Default()
 
