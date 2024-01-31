@@ -40,3 +40,12 @@ go.work.sum
 
 # Editor configuration
 .editorconfig
+
+# configuration .ini file
+*.ini
+
+# Log files
+*.log
+
+# env files
+.env
